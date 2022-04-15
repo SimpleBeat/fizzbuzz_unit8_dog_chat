@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DogChat Feed</title>
+    
+</head>
+<body>
+    <div class="pageContainer">
+        <section class="header">
+            <span>Header Image</span>
+            <span>DogChat</span>
+            <span>Feed</span>
+            <span>Login</span>
+        </section>
+        <section class="main">
+            <h1>My Feed</h1>
+
+            <div class="newMessage">
+                <span>Avatar</span>
+                <span>
+                    <div>
+                        <span>Name</span>
+                        <span>Handle</span>
+                    </div>
+                    <div>
+                        New message entry area
+                    </div>
+                    <div>
+                        Submit button
+                    </div>
+                </span>
+            </div>
+
+            {% for post in posts %}
+            <div class="feedMessage">
+                <span>Avatar</span>
+                <span>
+                    <div>
+                        <span>Name</span>
+                        <span>Handle</span>
+                        <span>Time</span>
+                    </div>
+                    <div>
+                        {{ post }}
+                    </div>
+                    <div>
+                        <span>LikeIcon</span>
+                        <span>LikeNumber</span>
+                        <span>CommentIcon</span>
+                        <span>CommentNumber</span>
+                    </div>
+                </span>
+            </div>
+            {% endfor %}
+
+        </section>
+        <section class="footer">
+            No footer so far
+        </section>
+    </div>
+</body>
+</html>
